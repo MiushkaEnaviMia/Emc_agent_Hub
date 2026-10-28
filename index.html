@@ -11,23 +11,33 @@ button{font:inherit;font-weight:700;padding:10px 12px;border:0;border-radius:10p
 #err{color:var(--bad);min-height:1.5em}
 </style></head><body>
 <form id="f"><h1>My tools</h1><p>Enter the password to open.</p>
-<input id="pw" type="password" autocomplete="current-password" placeholder="Password" autofocus>
+<input id="pw" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Password" autofocus>
 <label><input id="rem" type="checkbox" checked> Remember on this device</label>
 <button id="go" type="submit">Open</button><p id="err"></p></form>
 <script>
-const SALT="2YGHwHCficW2IYRpY3zD5Q==",IV="/Rgg86pyptcfTZ4W",DATA="EHbojxlFkJSlzZpDfOI/kGNKuBmOPVeDBF2i9s42kvuQMEPcbkZuqOpQQidW94QkwAi8MM3irVm/Eud+CdJ+1oTp0g9+Te1N0EE4Vi9mJD52qEFyrl2Qs1QHewjPlM7KngvbQJYiJtnT0uWj4jFDlzyyQC19CX1XlJkj2t7Y4WBJsYuh115QXPPQVknKb08M5ima4bQkMKL0W629nEjCDrXwyuFzjCRqbfzvZKiwmPDiMb73901wfV9RnPksGZAyzb89mlRCVt8w0biR5ilm0+4RhYstTIWqKui5/TUxUuLC6uvTR7fyIgaXlTRy5UtF2zMhcIsJckNVSD6s5K4yN4rXlfrTY1tricKvdWLRr9EBlfMUcV7qqYNGrtcKBK9Tf/LVmg7j27wEwuzCPbWbHveirGGmuR/4Yw31rMhFQOuvdQbd/DAo094EXRCYPIwE+HGHZsWu+FijF7N+5o99eEjEJzmCiCYlzyDdkYEw25hHQIxUM11yEOGRsqfU+36/pAEa1N/SjpPIG7BTRadzoXQNOWjp8oIViK+SAVf05vbuODSVzp6yf64wBC/xVBhN1/bL5vm9eUuUF1rarKl+v94YB+RBcCvoCjjz2KTwdJPTteM+fwa6y9rHz4jwCCpIkP02llCzQqcE1Gt28t4Zrjx0iv9mHt/6txzq9HCgunkF1neAlAbZkwh8cQFTZ+QncB/2I1r7KQumo11fvIYFzJ1rHfbo05dJRfwapFriVW331U0LcYqxyXyl5L8N5J6PMXayn2yFRPjGQ4lxxSIBhFbOlcZkp0N2tr9zv5zQPSlSHb7+XVc+rNfBlvziBPn5QcE6Bulo7kwN/cADe3TyBIS4+mHKiZQQ5qprDlBST7fiXTeVE3M78bapGk8BZEp1A5IC5FTGYYD8VM+a7AKOpM8O4IecNpmxpVXD+rChfvlUpJD4kqdS406JRuHNTY3C5iVQFGAWK12RkOMBGjP4OWeDY8RkIPhIyFW4Ywe8GmZoA7a10NVaWOjYxS8UHEbITciaaV6hVajWk+RF09iBwFdEqSdfeFdxfGtEY3VEww45uuq+8orPMHT4zEVYclJgGSwInh6+wdRLPqLIpqCn4fbxwxrwsddXKFQ7w+feTy9mnabQq2zj71mKUgygHaWlZFOdwlpsby9LmyOI1R16+nEYQSx8hMMKnTHS7EQMvJ6IsqzveOvwPZrDd645B45qQdrOsYXTYXHUfhoFdPsjCpkn2UGri18BeJJf+POGYeo7isXRKZLyIkiJqN1dFPCqhcPKA0CGFHmWxFGGKemJZGfVDyYB4Ngu7CQjTYQkZwma+RB6GgsXak5H3xT8lFTxs7s=",ITER=600000,KEY="lock.mytools";
+const SALT="n5ueQj3xYvmMgBxgh4OGSg==",IV="z1uH7MvlYT5p9Zyt",DATA="d9Bfi2qqYGnCyz74lf33BNDtY52UcimyMAKSoIqeLWCdPKMVKdEXUXesajczgg/yA6UB0SAiIbKDSFahhPdRpBZRcgEPxGYoOeBFzCIgEDiVcf/SZhPQ3GtqE3s1FDbiCm32o0QneX5l/xh6mGx9QOqiGrQmhTz9R4/q98tEZ3WXG6GZGfqlavW8ZmzqZz5YCidHN7BhNWzwXm0U3njrKJa1zSR1iQamtxem8ZoOev7Sf9FdQ+Kh9bE9w8EJulKqzaE75cWMfM8IpHfEfUZzjxYPOecSTGltEj+falW1/J7DYnWmZdsmx87nLw1xMqEvkQ4ueuxihjgIm9/wgeQnyYFetLwHy9R2DH6F16vlKvj4aZUSpQUs8GE2zNEqKDXO4mbpCiax585TIo0vGOTr1Q1wSx9zOeM4hQXHa3/34K4ho/aY9M3lUWGS0x3va5T5zuT2gxKV6r8uXkhLAuK5Uap90v0sNKBsfqS2NdofE7zCj+W4rI4h0axbSi9HsDbIkQkWorbTSI+sEc97kyLzw9nfy4mUKqQDn28/LlprJvgoYsD7cPreRrFcisrBK71Ny87hHneBFUPz7sNXfTTbwfaSsH0EOwsF0cJP8t3wCDGRDegjJ2YgJhG5wGDbokjyTm0+Y6Zgbs2f5glOkOOzuFcCWk56TFY0ZRWV8XpFTOrg61BmkkuR10HWL3pA8nzwghbwzhFNBnXm0wDVJpw9IYEc2AiHV/ECy6DUfrFMWD3MJM1w2z98wk0zBg1tk+mmcNl+oIoxyxAl72ZFYL8I+/6zlOHN8JJ1OnLa7DA0aKC7vu5tPhRwbyIcCbxj74B7CK5qowct+Sx9XPVZ5XSiPAzpKB1gB043DvbN0u+5Z3j9GHEer+JhyvrlU5o2umpJKPUQG8hFLp+1fJ1S2dbpOdjsKsKi76wkDDNjISzZLo0+cUuszVXvwmQ65WZMaedolbnwHTSVRbknQhBCIQB5xS3xsMprnisypaaeSOZnmuyLVhBI5tX2M79cPOV83GHsUlVZpheD64rTg0E8PTOB7VRcQmC04X4DGL0ydTGgoFXiEtd0TP9QAGjAVBorf7VsNPNG2UMh/sRIf5N5mJVQUrgFkFCpSy3sgcokXZ1NTB8UelDdrTlEXs8WOySZS/eIK01lOUi031iV1LE9D/UEutl5rbVHFDZ/1n2h/uscvnWo2QqlQPFspRUG1p0awnYMKeYhEdbDBAvk0om8rPk1kmlmlvtmt2FUsn9/uQ1+tyPJhIyxDZS8V2TBOAS42gxTI3jMkGMk8NibaWpXCHRgGOdhfVFup1HesUGzSZUArxbD5e5tpoZYtolC8SrQsmYEO8vT+1oRjKx3oaVPODvEV1ifaIzkjCTEMtNEz890by5Cvg4d+jFOIgBK7toOfxgSeUIn",ITER=600000,KEY="lock.mytools";
 const u8=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+// Older phones lack DecompressionStream: fall back to pako from cdnjs.
+const loadPako=()=>new Promise((ok,bad)=>{const s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/pako/2.1.0/pako.min.js';s.onload=ok;s.onerror=bad;document.head.appendChild(s);});
+async function gunzip(buf){
+  if(typeof DecompressionStream!=='undefined'){return await new Response(new Blob([buf]).stream().pipeThrough(new DecompressionStream('gzip'))).text();}
+  if(!window.pako)await loadPako();
+  return pako.ungzip(new Uint8Array(buf),{to:'string'});
+}
 async function open_(pw){
+  if(!window.crypto||!crypto.subtle)throw new Error('browser');
   const base=await crypto.subtle.importKey('raw',new TextEncoder().encode(pw),'PBKDF2',false,['deriveKey']);
   const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:u8(SALT),iterations:ITER,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['decrypt']);
-  const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:u8(IV)},key,u8(DATA));
-  const html=await new Response(new Blob([plain]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+  let plain;
+  try{plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:u8(IV)},key,u8(DATA));}catch(e){throw new Error('password');}
+  let html;
+  try{html=await gunzip(plain);}catch(e){throw new Error('browser');}
   document.open();document.write(html);document.close();
 }
 const saved=(()=>{try{return localStorage.getItem(KEY)}catch(e){return null}})();
 if(saved) open_(saved).catch(()=>{try{localStorage.removeItem(KEY)}catch(e){}});
-document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const err=document.getElementById('err'),go=document.getElementById('go'),pw=document.getElementById('pw').value,rem=document.getElementById('rem').checked;
+document.getElementById('f').addEventListener('submit',async e=>{e.preventDefault();const err=document.getElementById('err'),go=document.getElementById('go'),pw=document.getElementById('pw').value.trim(),rem=document.getElementById('rem').checked;
   err.textContent='';go.disabled=true;go.textContent='Opening…';
   try{await open_(pw);try{if(rem)localStorage.setItem(KEY,pw)}catch(x){}}
-  catch(x){err.textContent='Wrong password.';go.disabled=false;go.textContent='Open';}});
+  catch(x){err.textContent=x.message==='browser'?'This browser cannot open the page. Try Chrome or Safari, updated.':'Wrong password. Check capital letters (O, D, E) and no extra spaces.';go.disabled=false;go.textContent='Open';}});
 </script></body></html>
