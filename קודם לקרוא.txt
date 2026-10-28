@@ -1,0 +1,15 @@
+להעלאה ל-GitHub: הכלים שלי לנייד
+
+בתיקייה הזו 3 קבצים, נעולים בסיסמה:
+- index.html : דף הפתיחה (הכנה לראיונות, סוכן המשרות, הדשבורד של Ora)
+- prep.html  : ההכנה לראיונות, Wonderful ו-OurRitual
+- jobs.html  : דשבורד המשרות, נכון ל-28/10/2026
+
+איך מעלים (כמו באתר של Ora):
+1. github.com ← מתחברים.
+2. המאגר: Emc_agent_Hub (Public).
+3. uploading an existing file ← גוררים פנימה את 3 קבצי ה-html ← Commit changes.
+4. Settings ← Pages ← Branch: main , / (root) ← Save.
+5. אחרי כדקה, הלינק לנייד: https://miushkaenavimia.github.io/Emc_agent_Hub/
+
+בנייד: מקלידים את הסיסמה פעם אחת, ומשאירים מסומן "Remember on this device".
